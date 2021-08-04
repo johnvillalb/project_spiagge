@@ -1,4 +1,4 @@
-# project_spiaggie
+# project_spiagge
 npm init -y
 npm install cypress
 npx cypress -v
