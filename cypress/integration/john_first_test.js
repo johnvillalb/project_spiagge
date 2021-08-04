@@ -1,0 +1,26 @@
+/// <reference types="cypress" />
+
+it('spiagge test', function(){
+    cy.visit('https://spiagge.it')
+    cy.contains('Accetta', {timeout: 8000}).click()
+    cy.get('#search-input').type('Ravenna')
+    cy.get('#search-from-label').click()
+    cy.get('#day-2021-8-6').click()
+    cy.get('.mfp-close').click()
+    cy.get('#search-to-label').click()
+    cy.get('#day-2021-8-8').click()
+    //cy.get('.mfp-close').click()
+    cy.contains('Cerca').click()
+    cy.get(':nth-child(2) > .data > .beach-btns-box > .beach-book').click()
+    cy.contains('Prenota il tuo posto').click()
+    cy.contains('75').click()
+    cy.contains('Confirm').click()
+    cy.get('#input-name').type('John')
+    cy.get('#input-surname').type('Villalba')
+    cy.get('#input-phone').type('3457382445')
+    cy.get('#input-email').type('johnvillalba@live.it')
+    cy.get('#input-privacy').click()
+    cy.get('#input-booking').click()
+    cy.contains('Next').click()  
+   
+})
